@@ -1,0 +1,18 @@
+bloom:
+  public-url: http://localhost:5173
+  integration:
+    base-url: http://127.0.0.1:9   # nothing listens here: live gateway calls fail fast as UNREACHABLE
+    internal-token: test-internal-token
+    connect-timeout: 200ms
+    read-timeout: 500ms
+  crypto:
+    token-encryption-key: MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY=
+    key-version: 1
+  sync:
+    async: false
+    scheduled-enabled: false
+
+logging:
+  level:
+    org.flywaydb: warn
+    org.hibernate.SQL: off
